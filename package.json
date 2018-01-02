@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "pixi.js": "^4.6.2",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
     "react-pixi": "^0.9.16",
+    "react-render-image": "^1.1.1",
     "react-scripts": "1.0.17"
   },
   "scripts": {
