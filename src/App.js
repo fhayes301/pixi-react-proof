@@ -6,31 +6,32 @@ import logo from './logo.svg';
 const PIXI = require('pixi.js');
 
 
-var application = new PIXI.Application(800, 600, { transparent: true });
+var application = new PIXI.Application(800, 600);
+document.body.appendChild(application.view);
 
 class App extends React.Component {
 
-
-
-  playVideo() {
+  displayVideo() {
     var texture = PIXI.Texture.fromVideoUrl('https://www.youtube.com/watch?v=2G8V00SkTvYd');
-    console.log(texture)
     var videoSprite = new PIXI.Sprite(texture);
-    console.log(videoSprite)
     videoSprite.width = application.screen.width;
-    console.log(videoSprite.width)
     videoSprite.height = application.screen.height;
-    console.log(videoSprite.height)
     application.stage.addChild(videoSprite);
+    console.log(application)
+    console.log(application.stage)
+    console.log(videoSprite)
   }
 
   render() {
 
 
-    document.body.appendChild(application.view);
 
       return (
-        this.playVideo()
+        <div>
+
+          {this.displayVideo()}
+
+        </div>
       )
 
 
