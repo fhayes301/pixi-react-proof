@@ -12,29 +12,23 @@ document.body.appendChild(application.view);
 class App extends React.Component {
 
   displayVideo() {
-    var texture = PIXI.Texture.fromVideoUrl('https://www.youtube.com/watch?v=2G8V00SkTvYd');
+    let texture = PIXI.Texture.fromVideoUrl('/videoplayback.mp4');
+    console.log(texture)
+    texture.baseTexture.source.loop = true;
     var videoSprite = new PIXI.Sprite(texture);
     videoSprite.width = application.screen.width;
     videoSprite.height = application.screen.height;
     application.stage.addChild(videoSprite);
-    console.log(application)
-    console.log(application.stage)
-    console.log(videoSprite)
+
   }
 
   render() {
 
-
-
-      return (
-        <div>
-
-          {this.displayVideo()}
-
-        </div>
-      )
-
-
+    return(
+      <div>
+      {this.displayVideo()}
+      </div>
+    )
   }
 };
 
